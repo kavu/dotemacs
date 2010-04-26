@@ -41,13 +41,26 @@
 (setq auto-mode-alist (cons '("\.lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 
+(add-to-list 'load-path "~/.emacs.d/packages/distel/elisp")
+(require 'distel)
+(distel-setup)
+
+(add-hook 'erlang-mode-hook
+  (lambda ()
+   ;; when starting an Erlang shell in Emacs, default in the node name
+    (setq inferior-erlang-machine-options '("-sname" "emacs"))))
+(setq erl-nodename-cache
+  (make-symbol
+    (concat
+        "emacs@"
+        (car (split-string (shell-command-to-string "hostname"))))))
+
 (set-language-environment 'UTF-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'mule-utf-8)
 (setq default-input-method 'russian-computer)
 
-(setq make-backup-files nil)
 
 (show-paren-mode 1)
 (delete-selection-mode t)
@@ -73,6 +86,10 @@
 
 (windmove-default-keybindings)
 
+;disable backup and autosave
+(setq backup-inhibited t)
+(setq auto-save-default nil)
+(setq make-backup-files nil)
 
 ;;; This was installed by package-install.el.
 ;;; This provides support for the package system and
@@ -84,7 +101,3 @@
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
-;disable backup
-(setq backup-inhibited t)
-;disable auto save
-(setq auto-save-default nil)
