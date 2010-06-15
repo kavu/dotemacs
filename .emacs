@@ -1,7 +1,16 @@
+(defun pretty-lambdas ()
+  (font-lock-add-keywords
+   nil '(("(?\\(lambda\\>\\)"
+          (0 (progn (compose-region (match-beginning 1) (match-end 1) (make-char 'greek-iso8859-7 107)) nil))))))
+
 (setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
 (add-to-list 'load-path "~/.emacs.d/packages/slime/")
 (require 'slime)
 (slime-setup)
+
+(defun window-system-config()
+   (add-hook 'slime-mode-hook 'pretty-lambdas)
+   (add-hook 'emacs-lisp-mode-hook 'pretty-lambdas))
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -10,6 +19,8 @@
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 (setq x-select-enable-clipboard t)
 
+(if window-system 
+  (window-system-config))
 
 (set-face-attribute 'default nil :font "Dejavu Sans Mono-10")
 ;(setq tab-width 1)
