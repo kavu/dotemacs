@@ -9,6 +9,7 @@
 (slime-setup)
 
 (defun window-system-config()
+   (set-face-attribute 'default nil :font "Dejavu Sans Mono-10")
    (add-hook 'slime-mode-hook 'pretty-lambdas)
    (add-hook 'emacs-lisp-mode-hook 'pretty-lambdas))
 
@@ -22,7 +23,6 @@
 (if window-system 
   (window-system-config))
 
-(set-face-attribute 'default nil :font "Dejavu Sans Mono-10")
 ;(setq tab-width 1)
 (setq-default indent-tabs-mode nil)
 
