@@ -90,6 +90,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/packages/")
 
+; (require 'jabber-autoloads)
 
 ;;; ido.el - http://www.emacswiki.org/emacs/InteractivelyDoThings
 (require 'ido)
