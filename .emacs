@@ -2,6 +2,7 @@
 (add-to-list 'load-path "~/.emacs.d/packages/slime/")
 (require 'slime)
 (slime-setup)
+
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
@@ -27,6 +28,8 @@
 
 (add-to-list 'load-path "/home/kavu/.emacs.d/org-6.34c/lisp")
 (add-to-list 'load-path "/home/kavu/.emacs.d/org-6.34c/contrib")
+(add-to-list 'load-path "~/.emacs.d/packages/org/lisp")
+(add-to-list 'load-path "~/.emacs.d/packages/org/contrib")
 (require 'org-install)
 
 (autoload 'pkgbuild-mode "pkgbuild-mode.el" "PKGBUILD mode." t)
