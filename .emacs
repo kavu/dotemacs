@@ -10,24 +10,18 @@
 
 (add-to-list 'load-path "/home/kavu/.emacs.d/")
 
-(add-to-list 'load-path "/home/kavu/.emacs.d/color-theme")
+(add-to-list 'load-path "~/.emacs.d/packages/color-theme")
 (require 'color-theme)
 (color-theme-initialize)
 (vivid-chalk)
+(setq color-theme-is-global t)
 
 (add-to-list 'load-path "/usr/lib/erlang/lib/tools-2.6.5.1/emacs")
 (setq erlang-root-dir "/usr/lib/erlang")
 (setq exec-path (cons "/usr/lib/erlang/bin" exec-path))
 ;(load "erlang_appwiz" t nil)
 (require 'erlang-start)
-
-(setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
-(add-to-list 'load-path "~/.emacs.d/slime-1.2")  ; your SLIME directory
-(require 'slime)
-(slime-setup)
-
-(add-to-list 'load-path "/home/kavu/.emacs.d/org-6.34c/lisp")
-(add-to-list 'load-path "/home/kavu/.emacs.d/org-6.34c/contrib")
+  
 (add-to-list 'load-path "~/.emacs.d/packages/org/lisp")
 (add-to-list 'load-path "~/.emacs.d/packages/org/contrib")
 (require 'org-install)
