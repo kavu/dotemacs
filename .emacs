@@ -121,3 +121,6 @@
 (add-hook 'yaml-mode-hook
 	'(lambda ()
 		(define-key yaml-mode-map (kbd "RET") 'newline-and-indent)))
+(add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
+(autoload 'css-mode "css-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
