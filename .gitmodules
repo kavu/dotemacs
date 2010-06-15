@@ -1,3 +1,6 @@
 [submodule "packages/yasnippet"]
 	path = packages/yasnippet
 	url = git://github.com/emacsmirror/yasnippet.git
+[submodule "packages/magit"]
+	path = packages/magit
+	url = git://github.com/philjackson/magit.git
