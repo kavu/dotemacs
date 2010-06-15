@@ -35,14 +35,6 @@
 (autoload 'pkgbuild-mode "pkgbuild-mode.el" "PKGBUILD mode." t)
 (setq auto-mode-alist (append '(("/PKGBUILD$" . pkgbuild-mode)) auto-mode-alist))
 
-(add-hook 'haml-mode-hook 
-  '(lambda () (add-hook 'local-write-file-hooks 
-    '(lambda () (save-excursion (untabify (point-min) (point-max)))))))
-
-(add-hook 'sass-mode-hook 
-  '(lambda () (add-hook 'local-write-file-hooks 
-    '(lambda () (save-excursion (untabify (point-min) (point-max)))))))
-
 (autoload 'magit-status "magit" nil t)
 
 (setq auto-mode-alist (cons '("\.lua$" . lua-mode) auto-mode-alist))
@@ -115,6 +107,16 @@
 ;;; MaGit 
 (add-to-list 'load-path  "~/.emacs.d/packages/magit")
 (require 'magit)
+
+(require 'haml-mode)
+(add-hook 'haml-mode-hook 
+  '(lambda () (add-hook 'local-write-file-hooks 
+    '(lambda () (save-excursion (untabify (point-min) (point-max)))))))
+
+(require 'sass-mode)
+(add-hook 'sass-mode-hook 
+  '(lambda () (add-hook 'local-write-file-hooks 
+    '(lambda () (save-excursion (untabify (point-min) (point-max)))))))
 (add-to-list 'load-path "~/.emacs.d/packages/yaml-mode")
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
