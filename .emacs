@@ -1,3 +1,7 @@
+(setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
+(add-to-list 'load-path "~/.emacs.d/packages/slime/")
+(require 'slime)
+(slime-setup)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
