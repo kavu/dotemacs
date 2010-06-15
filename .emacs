@@ -102,6 +102,15 @@
 (add-hook 'sass-mode-hook 
   '(lambda () (add-hook 'local-write-file-hooks 
     '(lambda () (save-excursion (untabify (point-min) (point-max)))))))
+
+(add-to-list 'load-path "~/.emacs.d/packages/ruby-complexity")
+(require 'linum)
+(require 'ruby-complexity)
+(add-hook 'ruby-mode-hook
+        (function (lambda ()
+          (flymake-mode)
+          (linum-mode)
+          (ruby-complexity-mode))))
 (add-to-list 'load-path "~/.emacs.d/packages/yaml-mode")
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
