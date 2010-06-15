@@ -178,3 +178,5 @@
 (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
 (require 'ruby-electric)
 
+(add-to-list 'load-path "~/.emacs.d/packages/gist.el")
+(require 'gist)
