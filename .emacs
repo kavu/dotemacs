@@ -44,9 +44,6 @@
 (add-to-list 'load-path "~/.emacs.d/packages/org/contrib")
 (require 'org-install)
 
-(autoload 'pkgbuild-mode "pkgbuild-mode.el" "PKGBUILD mode." t)
-(setq auto-mode-alist (append '(("/PKGBUILD$" . pkgbuild-mode)) auto-mode-alist))
-
 (autoload 'magit-status "magit" nil t)
 
 (setq auto-mode-alist (cons '("\.lua$" . lua-mode) auto-mode-alist))
@@ -75,10 +72,6 @@
 
 (show-paren-mode 1)
 (delete-selection-mode t)
-
-(add-hook 'c-mode-hook
-  (lambda ()
-    (define-key c-mode-map (kbd "C-c c") 'compile)))
 
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message t)
@@ -180,3 +173,11 @@
 
 (add-to-list 'load-path "~/.emacs.d/packages/gist.el")
 (require 'gist)
+
+(autoload 'mode-compile "mode-compile"
+    "Command to compile current buffer file based on the major mode" t)
+(global-set-key "\C-cc" 'mode-compile)
+
+(autoload 'mode-compile-kill "mode-compile"
+    "Command to kill a compilation launched by `mode-compile'" t)
+(global-set-key "\C-ck" 'mode-compile-kill)
