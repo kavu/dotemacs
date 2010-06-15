@@ -102,6 +102,10 @@
 (require 'yasnippet)
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/packages/yasnippet/snippets")
+
+;;; idle-highlight.el
+(require 'idle-highlight)
+
 ;;; MaGit 
 (add-to-list 'load-path  "~/.emacs.d/packages/magit")
 (require 'magit)
