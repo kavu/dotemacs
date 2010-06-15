@@ -5,7 +5,10 @@
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+(tooltip-mode -1)
 
+(setq frame-title-format '(buffer-file-name "%f" ("%b")))
+(setq x-select-enable-clipboard t)
 
 
 (set-face-attribute 'default nil :font "Dejavu Sans Mono-10")
