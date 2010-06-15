@@ -6,9 +6,13 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(set-face-attribute 'default nil :font "Dejavu Sans Mono-10")
 
-(add-to-list 'load-path "/home/kavu/.emacs.d/")
+
+(set-face-attribute 'default nil :font "Dejavu Sans Mono-10")
+;(setq tab-width 1)
+(setq-default indent-tabs-mode nil)
+
+(add-to-list 'load-path "~/.emacs.d/")
 
 (add-to-list 'load-path "~/.emacs.d/packages/color-theme")
 (require 'color-theme)
@@ -42,6 +46,7 @@
   (lambda ()
    ;; when starting an Erlang shell in Emacs, default in the node name
     (setq inferior-erlang-machine-options '("-sname" "emacs"))))
+
 (setq erl-nodename-cache
   (make-symbol
     (concat
@@ -53,7 +58,6 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'mule-utf-8)
 (setq default-input-method 'russian-computer)
-
 
 (show-paren-mode 1)
 (delete-selection-mode t)
@@ -84,6 +88,9 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+(add-to-list 'load-path "~/.emacs.d/packages/")
+
+
 ;;; ido.el - http://www.emacswiki.org/emacs/InteractivelyDoThings
 (require 'ido)
 (ido-mode t)
@@ -101,6 +108,7 @@
 (require 'buff-menu+)
 (global-set-key (kbd "C-b") 'buffer-menu)
 
+;;; Yasnippet 
 (add-to-list 'load-path  "~/.emacs.d/packages/yasnippet")
 (require 'yasnippet)
 (yas/initialize)
@@ -139,10 +147,13 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-hook 'yaml-mode-hook
-	'(lambda ()
-		(define-key yaml-mode-map (kbd "RET") 'newline-and-indent)))
-(add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
+          '(lambda ()
+             (define-key yaml-mode-map (kbd "RET") 'newline-and-indent)))
+
 (autoload 'css-mode "css-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
+
 (autoload 'pkgbuild-mode "pkgbuild-mode.el" "PKGBUILD mode." t)
 (setq auto-mode-alist (append '(("/PKGBUILD$" . pkgbuild-mode)) auto-mode-alist))
+
+
