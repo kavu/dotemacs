@@ -19,3 +19,6 @@
 [submodule "packages/cucumber.el"]
 	path = packages/cucumber.el
 	url = git://github.com/michaelklishin/cucumber.el.git
+[submodule "packages/emacs-rails-reloaded"]
+	path = packages/emacs-rails-reloaded
+	url = git://github.com/hron/emacs-rails-reloaded.git

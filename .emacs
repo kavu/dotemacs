@@ -203,3 +203,6 @@
 (add-hook 'emacs-lisp-mode-hook       (lambda () (paredit-mode +1)))
 (add-hook 'lisp-mode-hook             (lambda () (paredit-mode +1)))
 (add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
+
+(setq load-path (cons (expand-file-name "~/.emacs.d/packages/emacs-rails-reloaded") load-path))
+(require 'rails-autoload)
