@@ -46,8 +46,8 @@
 
 (autoload 'magit-status "magit" nil t)
 
-(setq auto-mode-alist (cons '("\.lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(setq auto-mode-alist (cons '("\.lua$" . lua-mode) auto-mode-alist))
 
 (add-to-list 'load-path "~/.emacs.d/packages/distel/elisp")
 (require 'distel)
