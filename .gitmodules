@@ -10,3 +10,9 @@
 [submodule "packages/gist.el"]
 	path = packages/gist.el
 	url = git://github.com/defunkt/gist.el.git
+[submodule "packages/rspec-mode"]
+	path = packages/rspec-mode
+	url = git://github.com/pezra/rspec-mode.git
+[submodule "packages/emms"]
+	path = packages/emms
+	url = git://git.sv.gnu.org/emms.git

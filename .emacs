@@ -164,9 +164,8 @@
 (autoload 'pkgbuild-mode "pkgbuild-mode.el" "PKGBUILD mode." t)
 (setq auto-mode-alist (append '(("/PKGBUILD$" . pkgbuild-mode)) auto-mode-alist))
 
-
 (add-to-list 'load-path "~/.emacs.d/packages/ruby-mode")
-(autoload 'ruby-mode "ruby-mode" "Major mode for ruby files" t)
+(autoload 'ruby-mode "ruby-mode" "major mode for ruby files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
 (require 'ruby-electric)
@@ -176,8 +175,22 @@
 
 (autoload 'mode-compile "mode-compile"
     "Command to compile current buffer file based on the major mode" t)
-(global-set-key "\C-cc" 'mode-compile)
+;(global-set-key "\C-cc" 'mode-compile)
 
 (autoload 'mode-compile-kill "mode-compile"
     "Command to kill a compilation launched by `mode-compile'" t)
-(global-set-key "\C-ck" 'mode-compile-kill)
+;(global-set-key "\C-ck" 'mode-compile-kill)
+
+(add-to-list 'load-path "~/.emacs.d/packages/rspec-mode")
+(autoload 'rspec-mode "rspec-mode" " Minor mode for rSpec files" t)
+
+(add-to-list 'load-path "~/.emacs.d/packages/emms/lisp")
+
+(defun init-emms-setup() 
+  (interactive)
+  (if (boundp 'emms-version)
+      () 
+     (require 'emms-setup)
+     (emms-all)
+     (emms-default-players)))
+(global-set-key [f12] 'init-emms-setup)
