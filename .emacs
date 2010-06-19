@@ -203,3 +203,6 @@
 (add-hook 'emacs-lisp-mode-hook       (lambda () (paredit-mode +1)))
 (add-hook 'lisp-mode-hook             (lambda () (paredit-mode +1)))
 (add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
+
+(add-to-list 'load-path "~/.emacs.d/packages/rinari")
+(require 'rinari)
