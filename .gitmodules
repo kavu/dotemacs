@@ -16,3 +16,6 @@
 [submodule "packages/emms"]
 	path = packages/emms
 	url = git://git.sv.gnu.org/emms.git
+[submodule "packages/cucumber.el"]
+	path = packages/cucumber.el
+	url = git://github.com/michaelklishin/cucumber.el.git

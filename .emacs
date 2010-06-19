@@ -194,3 +194,7 @@
      (emms-all)
      (emms-default-players)))
 (global-set-key [f12] 'init-emms-setup)
+
+(add-to-list 'load-path "~/.emacs.d/packages/cucumber.el")
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
