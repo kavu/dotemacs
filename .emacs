@@ -120,7 +120,11 @@
 (add-to-list 'load-path  "~/.emacs.d/packages/yasnippet")
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/packages/yasnippet/snippets")
+(setq yas/root-directory '("~/.emacs.d/snippets"
+                           "~/.emacs.d/packages/yasnippet/snippets"
+                           "~/.emacs.d/packages/emacs-rails-reloaded/snippets"
+                           "~/.emacs.d/packages/cucumber.el/snippets"))
+(mapc 'yas/load-directory yas/root-directory)
 
 ;;; idle-highlight.el
 (require 'idle-highlight)
