@@ -217,3 +217,6 @@
 
 (add-to-list 'load-path "~/.emacs.d/packages/rhtml-mode")
 (require 'rhtml-mode)
+
+(require 'weather)
+(setq weather-city "Москва")
