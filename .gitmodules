@@ -22,3 +22,6 @@
 [submodule "packages/emacs-rails-reloaded"]
 	path = packages/emacs-rails-reloaded
 	url = git://github.com/hron/emacs-rails-reloaded.git
+[submodule "packages/rhtml-mode"]
+	path = packages/rhtml-mode
+	url = git://github.com/eschulte/rhtml.git
