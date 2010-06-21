@@ -25,3 +25,6 @@
 [submodule "packages/rhtml-mode"]
 	path = packages/rhtml-mode
 	url = git://github.com/eschulte/rhtml.git
+[submodule "packages/zencoding"]
+	path = packages/zencoding
+	url = git://github.com/chrisdone/zencoding.git
