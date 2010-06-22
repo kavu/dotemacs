@@ -255,3 +255,10 @@
 ;; (autopair-global-mode)
 (add-hook 'ruby-mode-hook 
 	  '(lambda () (autopair-mode)))
+
+(add-to-list 'load-path "~/.emacs.d/packages/regex-tool")
+(defun run-regex-tool ()
+  (interactive)
+  (require 'regex-tool)
+  (regex-tool))
+(global-set-key (kbd "<f2> r") 'run-regex-tool) 
