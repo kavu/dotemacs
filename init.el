@@ -3,13 +3,13 @@
    nil '(("(?\\(lambda\\>\\)"
           (0 (progn (compose-region (match-beginning 1) (match-end 1) (make-char 'greek-iso8859-7 107)) nil))))))
 
-(setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
+(setq inferior-lisp-program "/usr/bin/sbcl")
 (add-to-list 'load-path "~/.emacs.d/packages/slime/")
 (require 'slime)
 (slime-setup)
 
 (defun window-system-config()
-   (set-face-attribute 'default nil :font "Dejavu Sans Mono-10")
+   (set-face-attribute 'default nil :font "Droid Sans Mono-10")
    (add-hook 'slime-mode-hook 'pretty-lambdas)
    (add-hook 'emacs-lisp-mode-hook 'pretty-lambdas))
 
@@ -20,8 +20,8 @@
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 (setq x-select-enable-clipboard t)
 
-(if window-system 
-  (window-system-config))
+(if window-system
+    (window-system-config))
 
 ;(setq tab-width 1)
 (setq-default indent-tabs-mode nil)
@@ -44,8 +44,6 @@
 (add-to-list 'load-path "~/.emacs.d/packages/org/contrib")
 (require 'org-install)
 
-(autoload 'magit-status "magit" nil t)
-
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (setq auto-mode-alist (cons '("\.lua$" . lua-mode) auto-mode-alist))
 
@@ -54,15 +52,14 @@
 (distel-setup)
 
 (add-hook 'erlang-mode-hook
-  (lambda ()
-   ;; when starting an Erlang shell in Emacs, default in the node name
-    (setq inferior-erlang-machine-options '("-sname" "emacs"))))
+          (lambda ()
+            ;; when starting an Erlang shell in Emacs, default in the node name
+            (setq inferior-erlang-machine-options '("-sname" "emacs"))))
 
 (setq erl-nodename-cache
-  (make-symbol
-    (concat
-        "emacs@"
-        (car (split-string (shell-command-to-string "hostname"))))))
+      (make-symbol
+       (concat "emacs@"
+               (car (split-string (shell-command-to-string "hostname"))))))
 
 (set-language-environment 'UTF-8)
 (set-terminal-coding-system 'utf-8)
@@ -80,6 +77,7 @@
 (scroll-bar-mode -1)
 
 ;; Display time
+(setq display-time-24hr-format t)
 (display-time)
 
 ;; Always end a file with a newline
@@ -178,52 +176,55 @@
 (require 'gist)
 
 (autoload 'mode-compile "mode-compile"
-    "Command to compile current buffer file based on the major mode" t)
+  "Command to compile current buffer file based on the major mode" t)
 ;(global-set-key "\C-cc" 'mode-compile)
 
 (autoload 'mode-compile-kill "mode-compile"
-    "Command to kill a compilation launched by `mode-compile'" t)
+  "Command to kill a compilation launched by `mode-compile'" t)
 ;(global-set-key "\C-ck" 'mode-compile-kill)
 
 (add-to-list 'load-path "~/.emacs.d/packages/rspec-mode")
-(autoload 'rspec-mode "rspec-mode" " Minor mode for rSpec files" t)
+(autoload 'rspec-mode "rspec-mode" "Minor mode for rSpec files" t)
 
 (add-to-list 'load-path "~/.emacs.d/packages/emms/lisp")
+
+(defun init-emms ()
+  (interactive)
+  (require 'emms-setup)
+  (require 'emms-player-mpd)
+  (emms-devel)
+
+  (setq emms-player-mpd-music-directory "/home/kavu/Music")
+  ;(setq emms-player-mpd-server-name "localhost")
+  ;(setq emms-player-mpd-server-port "6600")
+  (emms-player-mpd-connect)
+  
+  (add-to-list 'emms-info-functions 'emms-info-mpd)
+  (add-to-list 'emms-player-list 'emms-player-mpd)
+  
+  (global-set-key (kbd "<XF86AudioPlay>") 'emms-pause)
+  (global-set-key (kbd "<XF86AudioStop>") 'emms-stop)
+  (global-set-key (kbd "<XF86AudioPrev>") 'emms-previous)
+  (global-set-key (kbd "<XF86AudioNext>") 'emms-next)
+  
+  ;(add-hook 'emms-player-started-hook 'emms-show)
+  (setq emms-track-description-function
+        (lambda (track)
+          (let ((artist (emms-track-get track 'info-artist))
+                (album  (emms-track-get track 'info-album))
+                (number (emms-track-get track 'info-tracknumber))
+                (title  (emms-track-get track 'info-title)))
+            (if (and artist album title)
+                (if number
+                    (format "%s - %s" artist title)
+                  (format "%s: %s - %s" artist title))
+              (emms-track-simple-description track))))))
 
 (defun init-emms-setup() 
   (interactive)
   (if (boundp 'emms-version)
-      () 
-     (require 'emms-setup)
-     (emms-all)
-     (emms-default-players)))
-     (emms-devel)
-     (require 'emms-player-mpd)
-     ;(emms-default-players)
-     (setq emms-player-mpd-music-directory "/home/kavu/Music")
-     (setq emms-player-mpd-server-name "localhost")
-     (setq emms-player-mpd-server-port "6600")
-     (emms-player-mpd-connect)
-     (add-to-list 'emms-info-functions 'emms-info-mpd)
-     (add-to-list 'emms-player-list 'emms-player-mpd)
-
-     (global-set-key (kbd "<XF86AudioPlay>") 'emms-pause)
-     (global-set-key (kbd "<XF86AudioStop>") 'emms-stop)
-     (global-set-key (kbd "<XF86AudioPrev>") 'emms-previous)
-     (global-set-key (kbd "<XF86AudioNext>") 'emms-next)
-     (add-hook 'emms-player-started-hook 'emms-show)
-     (setq emms-track-description-function
-      (lambda (track)
-        (let ((artist (emms-track-get track 'info-artist))
-              (album  (emms-track-get track 'info-album))
-              (number (emms-track-get track 'info-tracknumber))
-              (title  (emms-track-get track 'info-title)))
-          (if (and artist album title)
-              (if number
-                  ;(format "%s: %s - [%03d] %s" artist album (string-to-int number) title)
-                   (format "%s - %s" artist title)
-                (format "%s: %s - %s" artist album title))
-            (emms-track-simple-description track)))))))
+      (emms)
+    (init-emms)))
 
 (global-set-key [f12] 'init-emms-setup)
 
