@@ -79,6 +79,7 @@
 ;; Display time
 (setq display-time-24hr-format t)
 (display-time)
+(setq load-average t)
 
 ;; Always end a file with a newline
 (setq require-final-newline t)
