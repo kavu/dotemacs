@@ -263,3 +263,8 @@
   (require 'regex-tool)
   (regex-tool))
 (global-set-key (kbd "<f2> r") 'run-regex-tool) 
+
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (outline-minor-mode)
+             (setq outline-regexp " *\\(def \\|class\\|module\\)")))
