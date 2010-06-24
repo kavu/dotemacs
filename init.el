@@ -268,3 +268,6 @@
           '(lambda ()
              (outline-minor-mode)
              (setq outline-regexp " *\\(def \\|class\\|module\\)")))
+
+(require 'rvm)
+(rvm-use-default)
