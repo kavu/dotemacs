@@ -279,6 +279,13 @@
 (global-set-key (kbd "<f2> d") 'sr-speedbar-toggle) 
 (speedbar-add-supported-extension ".lisp")
 
+(add-to-list 'load-path "~/.emacs.d/packages/jd-el")
+(require 'google-maps)
+
+(require 'rainbow-mode)
+(add-hook 'css-mode-hook 'rainbow-mode)
+(add-hook 'sass-mode-hook 'rainbow-mode)
+
 (custom-set-variables
  '(speedbar-indentation-width 3)
  '(speedbar-smart-directory-expand-flag nil)
