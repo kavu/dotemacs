@@ -275,7 +275,11 @@
 (require 'rvm)
 (rvm-use-default)
 
-(custom-set-variables
- '(speedbar-use-images nil))
 (require 'sr-speedbar)
 (global-set-key (kbd "<f2> d") 'sr-speedbar-toggle) 
+(speedbar-add-supported-extension ".lisp")
+
+(custom-set-variables
+ '(speedbar-indentation-width 3)
+ '(speedbar-smart-directory-expand-flag nil)
+ '(speedbar-use-images nil))
