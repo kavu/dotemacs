@@ -286,6 +286,8 @@
 (add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'sass-mode-hook 'rainbow-mode)
 
+(require 'project-mode)
+
 (custom-set-variables
  '(speedbar-indentation-width 3)
  '(speedbar-smart-directory-expand-flag nil)
