@@ -31,3 +31,6 @@
 [submodule "packages/regex-tool"]
 	path = packages/regex-tool
 	url = git://github.com/kavu/regex-tool.git
+[submodule "packages/jd-el"]
+	path = packages/jd-el
+	url = git://git.naquadah.org/~jd/jd-el.git
