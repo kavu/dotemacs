@@ -133,14 +133,17 @@
 (require 'magit)
 
 (require 'haml-mode)
-(add-hook 'haml-mode-hook 
-  '(lambda () (add-hook 'local-write-file-hooks 
-    '(lambda () (save-excursion (untabify (point-min) (point-max)))))))
+(add-hook 'haml-mode-hook
+          '(lambda () (add-hook 'local-write-file-hooks 
+                           '(lambda () (save-excursion (untabify (point-min) (point-max)))))))
 
 (require 'sass-mode)
-(add-hook 'sass-mode-hook 
-  '(lambda () (add-hook 'local-write-file-hooks 
-    '(lambda () (save-excursion (untabify (point-min) (point-max)))))))
+(add-hook 'sass-mode-hook
+          '(lambda () (add-hook 'local-write-file-hooks
+                           '(lambda () (save-excursion (untabify (point-min) (point-max)))))))
+
+(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
+
 
 (add-to-list 'load-path "~/.emacs.d/packages/ruby-complexity")
 (require 'linum)
