@@ -286,6 +286,11 @@
 (add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'sass-mode-hook 'rainbow-mode)
 
+(load-file "~/.emacs.d/packages/cedet/common/cedet.el")
+(global-ede-mode 1)
+(semantic-load-enable-minimum-features)
+(semantic-load-enable-code-helpers)
+
 (custom-set-variables
  '(speedbar-indentation-width 3)
  '(speedbar-smart-directory-expand-flag nil)
