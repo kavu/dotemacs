@@ -291,7 +291,11 @@
 (semantic-load-enable-minimum-features)
 (semantic-load-enable-code-helpers)
 
+(add-to-list 'load-path "~/.emacs.d/packages/ecb")
+(require 'ecb)
+
 (custom-set-variables
+ '(ecb-options-version "2.40")
  '(speedbar-indentation-width 3)
  '(speedbar-smart-directory-expand-flag nil)
  '(speedbar-use-images nil))
