@@ -283,6 +283,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/packages/jd-el")
 (require 'google-maps)
+(require 'org-location-google-maps)
 
 (require 'rainbow-mode)
 (add-hook 'css-mode-hook 'rainbow-mode)
