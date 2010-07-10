@@ -1,3 +1,5 @@
+(defvar *emacs-load-start* (current-time))
+
 (defun pretty-lambdas ()
   (font-lock-add-keywords
    nil '(("(?\\(lambda\\>\\)"
@@ -290,3 +292,10 @@
  '(speedbar-indentation-width 3)
  '(speedbar-smart-directory-expand-flag nil)
  '(speedbar-use-images nil))
+
+(message "My .emacs loaded in %ds"
+         (destructuring-bind (hi lo ms) (current-time)
+           (- (+ hi lo)
+              (+ (first *emacs-load-start*)
+                 (second *emacs-load-start*)))))
+
