@@ -22,19 +22,14 @@
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 (setq x-select-enable-clipboard t)
 
-(defun ansi-colorize-buffer (buffer result)
-  (interactive)
-  (let ((buf (buffer-name)))
-    (setq buffer-read-only nil)
-    (ansi-color-apply-on-region (point-min) (point-max))
-    (setq buffer-read-only t)))
-
-(add-hook 'compilation-finish-functions 'ansi-colorize-buffer)
+(add-hook 'compilation-finish-functions (lambda (buffer result)
+                                          (setq buffer-read-only nil)
+                                          (ansi-color-apply-on-region (point-min) (point-max))
+                                          (setq buffer-read-only t)))
 
 (if window-system
     (window-system-config))
 
-;(setq tab-width 1)
 (setq-default indent-tabs-mode nil)
 
 (add-to-list 'load-path "~/.emacs.d/")
