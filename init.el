@@ -298,6 +298,11 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (setq haskell-font-lock-symbols t)
+
+(setq whitespace-line-column 80)
+(setq whitespace-style '(lines-tail))
+(setq whitespace-mode 1)
+
 (add-to-list 'load-path "~/.emacs.d/packages/rdebug")
 (require 'rdebug)
 
