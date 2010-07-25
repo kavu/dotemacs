@@ -297,6 +297,7 @@
 (load "haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(setq haskell-font-lock-symbols t)
 (add-to-list 'load-path "~/.emacs.d/packages/rdebug")
 (require 'rdebug)
 
