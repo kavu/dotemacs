@@ -307,6 +307,9 @@
 (add-to-list 'load-path "~/.emacs.d/packages/rdebug")
 (require 'rdebug)
 
+(load "~/.emacs.d/packages/nxhtml/autostart.el")
+(setq mumamo-no-chunk-coloring 1)
+(setq mumamo-chunk-coloring 'submode-colored)
 
 (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT"))
 (setq erc-autojoin-channels-alist '((".*" "#github" "#ruby-lang" "#archlinux" "##russian" "#RubyOnRails" "#git" "#emacs")))
