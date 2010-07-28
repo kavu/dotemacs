@@ -104,6 +104,8 @@
 
 ; (require 'jabber-autoloads)
 
+(setq-default indent-tabs-mode nil)
+
 ;;; ido.el - http://www.emacswiki.org/emacs/InteractivelyDoThings
 (require 'ido)
 (ido-mode t)
