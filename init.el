@@ -312,6 +312,10 @@
  '(speedbar-smart-directory-expand-flag nil)
  '(speedbar-use-images nil))
 
+(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT"))
+(setq erc-autojoin-channels-alist '((".*" "#github" "#ruby-lang" "#archlinux" "##russian" "#RubyOnRails" "#git" "#emacs")))
+
+
 ;(message "My .emacs loaded in %ds"
 ;         (destructuring-bind (hi lo ms) (current-time)
 ;           (- (+ hi lo)
