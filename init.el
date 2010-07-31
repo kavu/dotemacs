@@ -286,10 +286,11 @@
 (global-set-key (kbd "<f2> d") 'sr-speedbar-toggle) 
 (speedbar-add-supported-extension ".lisp")
 
-(add-to-list 'load-path "~/.emacs.d/packages/jd-el")
+(add-to-list 'load-path "~/.emacs.d/packages/google-maps")
 (require 'google-maps)
 (require 'org-location-google-maps)
 
+(add-to-list 'load-path "~/.emacs.d/packages/rainbow-mode")
 (require 'rainbow-mode)
 (add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'sass-mode-hook 'rainbow-mode)

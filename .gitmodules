@@ -34,3 +34,9 @@
 [submodule "packages/jd-el"]
 	path = packages/jd-el
 	url = git://git.naquadah.org/~jd/jd-el.git
+[submodule "packages/google-maps"]
+	path = packages/google-maps
+	url = git://git.naquadah.org/google-maps.git
+[submodule "packages/rainbow-mode"]
+	path = packages/rainbow-mode
+	url = git://git.naquadah.org/rainbow.git
