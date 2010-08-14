@@ -1,0 +1,6 @@
+(require 'linum)
+(require 'ruby-complexity)
+(add-hook 'ruby-mode-hook (lambda ()
+                            (flymake-mode)
+                            (linum-mode)
+                            (ruby-complexity-mode)))

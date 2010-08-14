@@ -1,0 +1,2 @@
+(require 'distel)
+(distel-setup)
