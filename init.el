@@ -11,6 +11,8 @@
 
 ;; modes
 
+(load "rc-color-theme.el")
+
 (load "rc-compilation-mode.el")
 (load "rc-mode-compile.el")
 (load "rc-whitespace-mode.el")
@@ -59,8 +61,6 @@
 
 (load "rc-emms.el")
 (load "rc-erc.el")
-
-(load "rc-color-theme.el")
 
 (setq custom-file "~/.emacs.d/rc/rc-custom.el")
 (load custom-file)
