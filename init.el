@@ -61,6 +61,7 @@
 
 (load "rc-emms.el")
 (load "rc-erc.el")
+(load "rc-jabber.el")
 
 (setq custom-file "~/.emacs.d/rc/rc-custom.el")
 (load custom-file)
