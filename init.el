@@ -1,3 +1,4 @@
+(require 'cl)
 ; (defvar *emacs-load-start* (current-time))
 
 ;; load paths
