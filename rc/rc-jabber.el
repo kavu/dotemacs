@@ -4,3 +4,5 @@
  '(("kavu13@gmail.com/emacs"
    (:network-server . "talk.google.com")
    (:connection-type . ssl))))
+
+(setq fsm-debug nil)
