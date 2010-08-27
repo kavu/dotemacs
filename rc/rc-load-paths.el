@@ -27,6 +27,7 @@
 (push "~/.emacs.d/packages/rdebug" load-path)
 (push "~/.emacs.d/packages/rhtml-mode" load-path)
 
+(push "~/.emacs.d/packages/coffee-mode" load-path)
 (push "~/.emacs.d/packages/zencoding" load-path)
 
 (push "~/.emacs.d/packages/regex-tool" load-path)
