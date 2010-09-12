@@ -14,6 +14,8 @@
 (setq display-time-24hr-format t)
 (display-time)
 
+(display-battery-mode 1)
+
 (setq load-average t)
 
 ;; Always end a file with a newline
