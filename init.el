@@ -49,7 +49,9 @@
 (load "rc-rdebug.el")
 
 (load "rc-rainbow-mode.el")
-(load "rc-js2-mode.el")
+(load "rc-moz.el")
+;(load "rc-js2-mode.el")
+(load "rc-espresso.el")
 (load "rc-css-mode.el")
 (load "rc-zencoding-mode.el")
 
