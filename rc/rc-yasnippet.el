@@ -1,5 +1,5 @@
 ;;; Yasnippet 
-(require 'yasnippet)
+(load "yasnippet")
 
 (yas/initialize)
 

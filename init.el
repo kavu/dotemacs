@@ -7,7 +7,7 @@
 
 ;; general Emacs
 
-(load "rc-defuns.el")
+(load "rc-defuns")
 (load "rc-general.el")
 
 ;; modes
