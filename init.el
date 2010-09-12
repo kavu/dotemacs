@@ -20,6 +20,7 @@
 (load "rc-autopair-mode.el")
 (load "rc-regex-tool.el")
 (load "rc-idle-highlight.el")
+(load "rc-pabbrev-mode.el")
 
 (load "rc-magit.el")
 (load "rc-gist.el")
