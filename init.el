@@ -62,6 +62,7 @@
 
 (load "rc-org-mode.el")
 (load "rc-google-maps.el")
+(load "rc-google-weather.el")
 (load "rc-auctex-mode.el")
 
 (load "rc-emms.el")

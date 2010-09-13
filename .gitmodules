@@ -43,3 +43,6 @@
 [submodule "packages/coffee-mode"]
 	path = packages/coffee-mode
 	url = git://github.com/defunkt/coffee-mode.git
+[submodule "packages/google-weather-el"]
+	path = packages/google-weather-el
+	url = git://git.naquadah.org/google-weather-el.git

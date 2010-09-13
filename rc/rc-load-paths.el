@@ -35,6 +35,7 @@
 (push "~/.emacs.d/packages/emms/lisp" load-path)
 
 (push "~/.emacs.d/packages/google-maps" load-path)
+(push "~/.emacs.d/packages/google-weather-el" load-path)
 (push "~/.emacs.d/packages/rainbow-mode" load-path)
 
 (push "~/.emacs.d/packages/haskell-mode" load-path)
