@@ -16,6 +16,7 @@
 
 (push "~/.emacs.d/packages/magit" load-path)
 (push "~/.emacs.d/packages/gist.el" load-path)
+(push "~/.emacs.d/packages/jump" load-path)
 
 (push "~/.emacs.d/packages/ruby-mode" load-path)
 
@@ -26,6 +27,8 @@
 (push "~/.emacs.d/packages/emacs-rails-reloaded" load-path)
 (push "~/.emacs.d/packages/rdebug" load-path)
 (push "~/.emacs.d/packages/rhtml-mode" load-path)
+
+(push "~/.emacs.d/packages/sinasi" load-path)
 
 (push "~/.emacs.d/packages/coffee-mode" load-path)
 (push "~/.emacs.d/packages/zencoding" load-path)

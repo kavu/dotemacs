@@ -36,6 +36,7 @@
 (load "rc-lua-mode.el")
 (load "rc-pkgbuild-mode.el")
 (load "rc-haskell-mode.el")
+(load "rc-sinasi.el")
 
 (load "rc-ruby-mode.el")
 (load "rc-haml-mode.el")

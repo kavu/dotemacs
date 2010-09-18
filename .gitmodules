@@ -46,3 +46,9 @@
 [submodule "packages/google-weather-el"]
 	path = packages/google-weather-el
 	url = git://git.naquadah.org/google-weather-el.git
+[submodule "packages/jump"]
+	path = packages/jump
+	url = http://github.com/eschulte/jump.el.git
+[submodule "packages/sinasi"]
+	path = packages/sinasi
+	url = http://github.com/nrr/sinasi.git
