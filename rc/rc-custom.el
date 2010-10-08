@@ -7,6 +7,7 @@
  '(erc-nick "Kavu")
  '(erc-system-name "Kavu")
  '(erc-user-full-name "Max Riveiro")
+ '(espresso-indent-level 2)
  '(jabber-auto-reconnect t)
  '(jabber-display-menu (quote maybe))
  '(jabber-keepalive-interval 60)
