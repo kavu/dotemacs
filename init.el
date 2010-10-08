@@ -57,6 +57,7 @@
 (load "rc-css-mode.el")
 (load "rc-zencoding-mode.el")
 
+(load "rc-flymake.el")
 (load "rc-ido.el")
 (load "rc-buff-menu.el")
 (load "rc-speedbar.el")
