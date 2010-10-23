@@ -34,6 +34,8 @@
 (load "rc-erlang-mode.el")
 (load "rc-distel.el")
 
+(load "rc-obj-j-mode.el")
+
 (load "rc-lua-mode.el")
 (load "rc-pkgbuild-mode.el")
 (load "rc-haskell-mode.el")
