@@ -4,6 +4,9 @@
 
 (push "~/.emacs.d/packages/slime/" load-path)
 
+(push "~/.emacs.d/packages/clojure-mode" load-path)
+(push "~/.emacs.d/packages/swank-clojure" load-path)
+
 (push "~/.emacs.d/packages/color-theme" load-path)
 
 (push "/usr/lib/erlang/lib/tools-2.6.5.1/emacs" load-path)

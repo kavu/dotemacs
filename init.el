@@ -29,6 +29,7 @@
 
 (load "rc-slime.el")
 (load "rc-paredit.el")
+(load "rc-clojure.el")
 
 (load "rc-erlang-mode.el")
 (load "rc-distel.el")
