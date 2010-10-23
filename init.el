@@ -38,6 +38,8 @@
 (load "rc-haskell-mode.el")
 (load "rc-sinasi.el")
 
+(load "rc-php-mode.el")
+
 (load "rc-ruby-mode.el")
 (load "rc-haml-mode.el")
 (load "rc-sass-mode.el")

@@ -18,6 +18,8 @@
 (push "~/.emacs.d/packages/gist.el" load-path)
 (push "~/.emacs.d/packages/jump" load-path)
 
+(push "~/.emacs.d/packages/php-mode" load-path)
+
 (push "~/.emacs.d/packages/ruby-mode" load-path)
 
 (push "~/.emacs.d/packages/ruby-complexity" load-path)
