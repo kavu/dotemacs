@@ -52,3 +52,12 @@
 [submodule "packages/sinasi"]
 	path = packages/sinasi
 	url = http://github.com/nrr/sinasi.git
+[submodule "packages/php-mode"]
+	path = packages/php-mode
+	url = git://github.com/emacsmirror/php-mode.git
+[submodule "packages/swank-clojure"]
+	path = packages/swank-clojure
+	url = http://github.com/jochu/swank-clojure.git
+[submodule "packages/clojure-mode"]
+	path = packages/clojure-mode
+	url = http://github.com/jochu/clojure-mode.git
