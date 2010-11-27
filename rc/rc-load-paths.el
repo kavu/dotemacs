@@ -9,7 +9,7 @@
 
 (push "~/.emacs.d/packages/color-theme" load-path)
 
-(push "/usr/lib/erlang/lib/tools-2.6.5.1/emacs" load-path)
+(push "/usr/lib/erlang/lib/tools-2.6.6.1/emacs" load-path)
 (push "~/.emacs.d/packages/distel/elisp" load-path)
 
 (push "~/.emacs.d/packages/org/lisp" load-path)
