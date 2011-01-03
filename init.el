@@ -75,6 +75,7 @@
 (load "rc-emms.el")
 (load "rc-erc.el")
 (load "rc-jabber.el")
+(load "rc-dired.el")
 (load "rc-smooth-scroll.el")
 
 (setq custom-file "~/.emacs.d/rc/rc-custom.el")
