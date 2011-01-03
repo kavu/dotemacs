@@ -46,7 +46,7 @@
 (load "rc-ruby-mode.el")
 (load "rc-haml-mode.el")
 (load "rc-sass-mode.el")
-(load "rc-ruby-complexity.el")
+;(load "rc-ruby-complexity.el")
 (load "rc-rspec-mode.el")
 (load "rc-cucumber.el")
 (load "rc-yaml-mode.el")
