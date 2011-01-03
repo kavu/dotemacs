@@ -61,3 +61,6 @@
 [submodule "packages/clojure-mode"]
 	path = packages/clojure-mode
 	url = http://github.com/jochu/clojure-mode.git
+[submodule "packages/smooth-scroll"]
+	path = packages/smooth-scroll
+	url = git://github.com/k-talo/smooth-scroll.el.git

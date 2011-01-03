@@ -47,3 +47,5 @@
 (push "~/.emacs.d/packages/rainbow-mode" load-path)
 
 (push "~/.emacs.d/packages/haskell-mode" load-path)
+
+(push "~/.emacs.d/packages/smooth-scroll" load-path)
