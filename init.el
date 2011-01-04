@@ -68,6 +68,7 @@
 (load "rc-ido.el")
 (load "rc-buff-menu.el")
 (load "rc-speedbar.el")
+(load "rc-smex.el")
 
 (load "rc-org-mode.el")
 (load "rc-google-maps.el")

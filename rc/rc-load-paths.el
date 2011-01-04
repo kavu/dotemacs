@@ -18,6 +18,7 @@
 (push "~/.emacs.d/packages/yasnippet" load-path)
 
 (push "~/.emacs.d/packages/magit" load-path)
+(push "~/.emacs.d/packages/magithub" load-path)
 (push "~/.emacs.d/packages/gist.el" load-path)
 (push "~/.emacs.d/packages/jump" load-path)
 
@@ -49,3 +50,4 @@
 (push "~/.emacs.d/packages/haskell-mode" load-path)
 
 (push "~/.emacs.d/packages/smooth-scroll" load-path)
+(push "~/.emacs.d/packages/smex" load-path)
