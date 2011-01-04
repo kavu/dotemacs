@@ -12,3 +12,8 @@
   (add-hook 'slime-mode-hook 'pretty-lambdas)
   (add-hook 'emacs-lisp-mode-hook 'pretty-lambdas))
 
+;;; FIXME/TODO/BUG/XXX highlight
+(defun markers-hl ()
+  (font-lock-add-keywords nil
+                          '(("\\<\\(FIXME\\|TODO\\|BUG\\|XXX\\):" 1 font-lock-warning-face t))))
+

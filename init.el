@@ -7,7 +7,7 @@
 
 ;; general Emacs
 
-(load "rc-defuns")
+(load "rc-defuns.el")
 (load "rc-general.el")
 
 ;; modes
@@ -81,6 +81,8 @@
 (load "rc-jabber.el")
 (load "rc-dired.el")
 (load "rc-smooth-scroll.el")
+
+(load "rc-markers-hl.el")
 
 (setq custom-file "~/.emacs.d/rc/rc-custom.el")
 (load custom-file)
