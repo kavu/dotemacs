@@ -1,5 +1,3 @@
-
-
 (if window-system
     (window-system-config))
 
@@ -44,3 +42,17 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'mule-utf-8)
 (setq default-input-method 'russian-computer)
+
+(add-hook 'kill-buffer-query-functions
+          (function (lambda () (if (equal (buffer-name (current-buffer)) "*scratch*")
+                              (progn
+                                (delete-region (point-min) (point-max))
+                                nil)
+                            t)) ))
+
+;;; Disallow saving with mismathed parentheses
+;;; http://www.emacswiki.org/emacs/DebuggingParentheses
+(add-hook 'emacs-lisp-mode-hook
+          (function (lambda ()
+                      (add-hook 'local-write-file-hooks
+                                'check-parens))))
